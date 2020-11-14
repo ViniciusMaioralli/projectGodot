@@ -1,0 +1,106 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://Personagem/Robot/Dead (3).png" type="Texture" id=1]
+[ext_resource path="res://Personagem/Robot/Dead (9).png" type="Texture" id=2]
+[ext_resource path="res://Personagem/Robot/Dead (10).png" type="Texture" id=3]
+[ext_resource path="res://Personagem/Robot/Melee (1).png" type="Texture" id=4]
+[ext_resource path="res://Personagem/Robot/Melee (4).png" type="Texture" id=5]
+[ext_resource path="res://Personagem/Robot/Melee (2).png" type="Texture" id=6]
+[ext_resource path="res://Personagem/Robot/Melee (5).png" type="Texture" id=7]
+[ext_resource path="res://Personagem/Robot/Melee (6).png" type="Texture" id=8]
+[ext_resource path="res://Personagem/Robot/Melee (7).png" type="Texture" id=9]
+[ext_resource path="res://Personagem/Robot/Dead (1).png" type="Texture" id=10]
+[ext_resource path="res://Personagem/Robot/Melee (3).png" type="Texture" id=11]
+[ext_resource path="res://Personagem/Robot/Dead (2).png" type="Texture" id=12]
+[ext_resource path="res://Personagem/Robot/Dead (4).png" type="Texture" id=13]
+[ext_resource path="res://Personagem/Robot/Dead (5).png" type="Texture" id=14]
+[ext_resource path="res://Personagem/Robot/Melee (8).png" type="Texture" id=15]
+[ext_resource path="res://Personagem/Robot/Dead (6).png" type="Texture" id=16]
+[ext_resource path="res://Personagem/Robot/Dead (7).png" type="Texture" id=17]
+[ext_resource path="res://Personagem/Robot/Dead (8).png" type="Texture" id=18]
+[ext_resource path="res://Personagem/Robot/JumpMelee (2).png" type="Texture" id=19]
+[ext_resource path="res://Personagem/Robot/JumpMelee (3).png" type="Texture" id=20]
+[ext_resource path="res://Personagem/Robot/JumpMelee (5).png" type="Texture" id=21]
+[ext_resource path="res://Personagem/Robot/JumpMelee (6).png" type="Texture" id=22]
+[ext_resource path="res://Personagem/Robot/JumpMelee (1).png" type="Texture" id=23]
+[ext_resource path="res://Personagem/Robot/JumpMelee (4).png" type="Texture" id=24]
+[ext_resource path="res://Script/Robot.gd" type="Script" id=46]
+
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 23 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 24 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "Attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 1 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": false,
+"name": "Dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Melee",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 139.076, 192.436 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 601.027, 92.1799 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 606.192, 90.306 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 125.979, 35.769 )
+
+[sub_resource type="CapsuleShape2D" id=6]
+
+[node name="Zumbi-Female" type="StaticBody2D" groups=[
+"inimigo",
+]]
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 46 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "Melee"
+frame = 1
+playing = true
+
+[node name="Dano" type="Area2D" parent="."]
+
+[node name="Dano_Player" type="CollisionShape2D" parent="Dano"]
+position = Vector2( -19.2073, 42.4357 )
+shape = SubResource( 2 )
+
+[node name="AtacarE" type="Area2D" parent="."]
+
+[node name="AtacarE" type="CollisionShape2D" parent="AtacarE"]
+position = Vector2( -771.027, 72.1799 )
+shape = SubResource( 3 )
+
+[node name="AtacarD" type="Area2D" parent="."]
+
+[node name="AtacarD" type="CollisionShape2D" parent="AtacarD"]
+position = Vector2( 747.141, 90.306 )
+shape = SubResource( 4 )
+
+[node name="Morte" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Morte"]
+position = Vector2( -12.6457, -194.231 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 6 )
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="body_entered" from="Dano" to="." method="_on_Dano_body_entered"]
+[connection signal="body_entered" from="AtacarE" to="." method="_on_AtacarE_body_entered"]
+[connection signal="body_exited" from="AtacarE" to="." method="_on_AtacarE_body_exited"]
+[connection signal="body_entered" from="AtacarD" to="." method="_on_AtacarD_body_entered"]
+[connection signal="body_exited" from="AtacarD" to="." method="_on_AtacarD_body_exited"]
+[connection signal="body_entered" from="Morte" to="." method="_on_Morte_body_entered"]

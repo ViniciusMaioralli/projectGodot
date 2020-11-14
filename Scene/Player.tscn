@@ -1,0 +1,126 @@
+[gd_scene load_steps=71 format=2]
+
+[ext_resource path="res://Personagem/Noel/Run (4).png" type="Texture" id=4]
+[ext_resource path="res://Personagem/Noel/Walk (10).png" type="Texture" id=6]
+[ext_resource path="res://Personagem/Noel/Walk (11).png" type="Texture" id=8]
+[ext_resource path="res://Personagem/Noel/Run (1).png" type="Texture" id=9]
+[ext_resource path="res://Personagem/Noel/Run (10).png" type="Texture" id=10]
+[ext_resource path="res://Personagem/Noel/Run (7).png" type="Texture" id=11]
+[ext_resource path="res://Personagem/Noel/Run (8).png" type="Texture" id=13]
+[ext_resource path="res://Personagem/Noel/Walk (13).png" type="Texture" id=16]
+[ext_resource path="res://Personagem/Noel/Walk (1).png" type="Texture" id=20]
+[ext_resource path="res://Personagem/Noel/Walk (7).png" type="Texture" id=22]
+[ext_resource path="res://Personagem/Noel/Run (6).png" type="Texture" id=26]
+[ext_resource path="res://Personagem/Noel/Run (11).png" type="Texture" id=29]
+[ext_resource path="res://Personagem/Noel/Walk (8).png" type="Texture" id=33]
+[ext_resource path="res://Personagem/Noel/Run (2).png" type="Texture" id=35]
+[ext_resource path="res://Personagem/Noel/Run (3).png" type="Texture" id=40]
+[ext_resource path="res://Personagem/Noel/Walk (12).png" type="Texture" id=42]
+[ext_resource path="res://Personagem/Noel/Run (9).png" type="Texture" id=44]
+[ext_resource path="res://Personagem/Noel/Walk (9).png" type="Texture" id=46]
+[ext_resource path="res://Personagem/Noel/Run (5).png" type="Texture" id=50]
+[ext_resource path="res://Personagem/Noel/Idle (16).png" type="Texture" id=51]
+[ext_resource path="res://Personagem/Noel/Jump (7).png" type="Texture" id=52]
+[ext_resource path="res://Personagem/Noel/Dead (3).png" type="Texture" id=53]
+[ext_resource path="res://Personagem/Noel/Idle (4).png" type="Texture" id=54]
+[ext_resource path="res://Personagem/Noel/Idle (6).png" type="Texture" id=55]
+[ext_resource path="res://Personagem/Noel/Idle (5).png" type="Texture" id=56]
+[ext_resource path="res://Personagem/Noel/Idle (8).png" type="Texture" id=57]
+[ext_resource path="res://Personagem/Noel/Idle (13).png" type="Texture" id=58]
+[ext_resource path="res://Personagem/Noel/Jump (11).png" type="Texture" id=59]
+[ext_resource path="res://Personagem/Noel/Dead (5).png" type="Texture" id=60]
+[ext_resource path="res://Personagem/Noel/Dead (6).png" type="Texture" id=62]
+[ext_resource path="res://Personagem/Noel/Dead (12).png" type="Texture" id=63]
+[ext_resource path="res://Personagem/Noel/Jump (12).png" type="Texture" id=64]
+[ext_resource path="res://Personagem/Noel/Jump (5).png" type="Texture" id=65]
+[ext_resource path="res://Personagem/Noel/Dead (13).png" type="Texture" id=66]
+[ext_resource path="res://Personagem/Noel/Dead (14).png" type="Texture" id=67]
+[ext_resource path="res://Personagem/Noel/Idle (7).png" type="Texture" id=69]
+[ext_resource path="res://Personagem/Noel/Idle (14).png" type="Texture" id=70]
+[ext_resource path="res://Personagem/Noel/Idle (11).png" type="Texture" id=71]
+[ext_resource path="res://Personagem/Noel/Jump (2).png" type="Texture" id=72]
+[ext_resource path="res://Personagem/Noel/Idle (10).png" type="Texture" id=73]
+[ext_resource path="res://Personagem/Noel/Jump (1).png" type="Texture" id=74]
+[ext_resource path="res://Personagem/Noel/Jump (10).png" type="Texture" id=75]
+[ext_resource path="res://Personagem/Noel/Jump (4).png" type="Texture" id=76]
+[ext_resource path="res://Personagem/Noel/Jump (14).png" type="Texture" id=77]
+[ext_resource path="res://Personagem/Noel/Jump (3).png" type="Texture" id=78]
+[ext_resource path="res://Personagem/Noel/Jump (16).png" type="Texture" id=79]
+[ext_resource path="res://Personagem/Noel/Idle (9).png" type="Texture" id=85]
+[ext_resource path="res://Personagem/Noel/Idle (15).png" type="Texture" id=87]
+[ext_resource path="res://Personagem/Noel/Idle (1).png" type="Texture" id=88]
+[ext_resource path="res://Personagem/Noel/Idle (3).png" type="Texture" id=89]
+[ext_resource path="res://Personagem/Noel/Jump (8).png" type="Texture" id=90]
+[ext_resource path="res://Personagem/Noel/Jump (6).png" type="Texture" id=94]
+[ext_resource path="res://Personagem/Noel/Jump (9).png" type="Texture" id=96]
+[ext_resource path="res://Personagem/Noel/Dead (1).png" type="Texture" id=97]
+[ext_resource path="res://Personagem/Noel/Dead (2).png" type="Texture" id=98]
+[ext_resource path="res://Personagem/Noel/Jump (13).png" type="Texture" id=101]
+[ext_resource path="res://Personagem/Noel/Dead (4).png" type="Texture" id=102]
+[ext_resource path="res://Personagem/Noel/Jump (15).png" type="Texture" id=103]
+[ext_resource path="res://Personagem/Noel/Dead (7).png" type="Texture" id=104]
+[ext_resource path="res://Personagem/Noel/Dead (8).png" type="Texture" id=106]
+[ext_resource path="res://Personagem/Noel/Dead (9).png" type="Texture" id=107]
+[ext_resource path="res://Personagem/Noel/Dead (11).png" type="Texture" id=108]
+[ext_resource path="res://Personagem/Noel/Dead (10).png" type="Texture" id=109]
+[ext_resource path="res://Personagem/Noel/Idle (2).png" type="Texture" id=110]
+[ext_resource path="res://Personagem/Noel/Dead (15).png" type="Texture" id=111]
+[ext_resource path="res://Personagem/Noel/Dead (17).png" type="Texture" id=112]
+[ext_resource path="res://Personagem/Noel/Dead (16).png" type="Texture" id=113]
+[ext_resource path="res://Script/Player.gd" type="Script" id=117]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 88 ), ExtResource( 110 ), ExtResource( 89 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 55 ), ExtResource( 69 ), ExtResource( 57 ), ExtResource( 85 ), ExtResource( 73 ), ExtResource( 71 ), ExtResource( 58 ), ExtResource( 70 ), ExtResource( 87 ), ExtResource( 51 ) ],
+"loop": true,
+"name": "idle",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 97 ), ExtResource( 98 ), ExtResource( 53 ), ExtResource( 102 ), ExtResource( 60 ), ExtResource( 62 ), ExtResource( 104 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 109 ), ExtResource( 108 ), ExtResource( 63 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 111 ), ExtResource( 113 ), ExtResource( 112 ) ],
+"loop": false,
+"name": "dead",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 22 ), ExtResource( 33 ), ExtResource( 46 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 42 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "walk",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 74 ), ExtResource( 72 ), ExtResource( 78 ), ExtResource( 76 ), ExtResource( 65 ), ExtResource( 94 ), ExtResource( 52 ), ExtResource( 90 ), ExtResource( 96 ), ExtResource( 75 ), ExtResource( 59 ), ExtResource( 64 ), ExtResource( 101 ), ExtResource( 77 ), ExtResource( 103 ), ExtResource( 79 ) ],
+"loop": false,
+"name": "jump",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 35 ), ExtResource( 40 ), ExtResource( 4 ), ExtResource( 50 ), ExtResource( 26 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 44 ), ExtResource( 10 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "run",
+"speed": 15.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 130.57
+height = 158.045
+
+[node name="Player" type="KinematicBody2D"]
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 117 )
+
+[node name="sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 19.2827, 0 )
+frames = SubResource( 1 )
+animation = "idle"
+frame = 3
+playing = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( -4.6487, 10.8845 )
+shape = SubResource( 2 )
+
+[node name="RayD" type="RayCast2D" parent="."]
+position = Vector2( 64.3123, 174.076 )
+
+[node name="RayE" type="RayCast2D" parent="."]
+position = Vector2( -168.148, 215.582 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 105.423, 115.817 )

@@ -1,0 +1,113 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://menu.gd" type="Script" id=1]
+[ext_resource path="res://Personagem/Noel/Idle (1).png" type="Texture" id=2]
+[ext_resource path="res://Backgrounds/BG/button.png" type="Texture" id=3]
+[ext_resource path="res://Personagem/Robot/Idle (1).png" type="Texture" id=4]
+[ext_resource path="res://Backgrounds/BG/BG.png" type="Texture" id=5]
+[ext_resource path="res://font/Marsha DEMO.otf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://font/Marsha DEMO.otf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 55
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://font/Marsha DEMO.otf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+use_mipmaps = true
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+
+[node name="menu" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Bg" type="Sprite" parent="."]
+position = Vector2( 510.008, 355.038 )
+texture = ExtResource( 5 )
+
+[node name="Noel" type="Sprite" parent="."]
+position = Vector2( 913.905, 379.952 )
+texture = ExtResource( 2 )
+
+[node name="Robot" type="Sprite" parent="."]
+position = Vector2( 209.895, 354.978 )
+texture = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Title" type="Label" parent="CanvasLayer"]
+margin_left = 182.918
+margin_top = 8.02666
+margin_right = 769.918
+margin_bottom = 70.0267
+custom_fonts/font = SubResource( 2 )
+text = "Robos vs Noel"
+align = 1
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 375.456, 374.197 )
+scale = Vector2( 0.301266, 0.311672 )
+normal = ExtResource( 3 )
+
+[node name="Entrar" type="Label" parent="CanvasLayer"]
+anchor_left = 0.381
+anchor_top = 0.655
+anchor_right = 0.545
+anchor_bottom = 0.772
+margin_left = -2.3981
+margin_top = 1.43149
+margin_right = 12.6659
+margin_bottom = 0.231506
+custom_fonts/font = SubResource( 4 )
+text = "START"
+align = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 376.979, 491.142 )
+scale = Vector2( 0.3, 0.3 )
+normal = ExtResource( 3 )
+pressed = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchor_left = 0.388
+anchor_top = 0.85
+anchor_right = 0.55
+anchor_bottom = 0.942
+margin_left = 34.4063
+margin_top = -0.0793457
+margin_right = -40.4818
+margin_bottom = -0.279358
+custom_fonts/font = SubResource( 5 )
+text = "QUIT"
+align = 1
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_Quit_pressed"]
